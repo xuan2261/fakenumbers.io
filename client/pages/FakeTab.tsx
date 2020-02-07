@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import SampleCode from '../components/SampleCode';
 import NumberType from '../constants/NumberType';
+import ClickToCopy from './ClickToCopy';
 
 interface FakeTabProps {
     numberType: NumberType;
@@ -14,7 +15,7 @@ const FakeTab: React.FC<FakeTabProps> = ({ fake, numberType }) => {
 
     return (
         <div>
-            <div>{value}</div>
+            <ClickToCopy>{value}</ClickToCopy>
             <button className="border" onClick={generate}>Fake</button>
 
             <div>API</div>
