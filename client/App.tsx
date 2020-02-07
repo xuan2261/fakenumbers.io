@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Route, Switch as RouteSwitch } from 'react-rou
 import './index.css';
 
 import HomePage from './pages/HomePage';
+import NumbersPage from './pages/NumbersPage';
 
 const App = () => {
     return (
         <Router>
             <RouteSwitch>
                 <Route exact={true} path='/'><HomePage /></Route>
+                <Route exact={true} path='/numbers'><NumbersPage /></Route>
             </RouteSwitch>
         </Router>
     );

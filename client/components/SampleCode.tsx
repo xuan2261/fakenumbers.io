@@ -13,7 +13,7 @@ const SampleCode: React.FC<SampleCodeProps> = ({ code, fullHeight = false, lang 
             ? <></>
             : (
                 <pre
-                    className="hljs"
+                    className="hljs w-full"
                     style={{
                         height: fullHeight ? '100%' : 'auto',
                         lineHeight: 1.5,
