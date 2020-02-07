@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import NumberType from '../constants/NumberType';
 
@@ -8,7 +9,11 @@ interface NumberCardProps {
 
 const NumberCard: React.FC<NumberCardProps> = ({ numberType }) => {
     return (
-        <div>{numberType}</div>
+        <div>
+            <Link to={`/numbers/${numberType}`}>
+                {numberType}
+            </Link>
+        </div>
     );
 };
 
