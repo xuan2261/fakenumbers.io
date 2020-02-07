@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import { CheckResult } from '@phuocng/fake-numbers';
 
+import SampleCode from '../components/SampleCode';
 import NumberType from '../constants/NumberType';
 
 interface CheckTabProps {
@@ -18,10 +19,21 @@ const CheckTab: React.FC<CheckTabProps> = ({ check, numberType }) => {
                 className="border"
                 placeholder="Type the number"
                 value={value}
-                onChange={changeNumber} />
+                onChange={changeNumber}
+            />
             <div>
                 { value && (check(value).valid ? 'Valid' : ' Invalid') }
             </div>
+
+            <div>API</div>
+            <SampleCode
+                code={`
+import { ${numberType} } from '@phuocng/fake-numbers';
+
+// Check a number
+const isValid = ${numberType}.check('given number').valid;
+`}
+            />
         </div>
     );
 };
