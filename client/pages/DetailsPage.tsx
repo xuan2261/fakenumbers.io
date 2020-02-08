@@ -42,9 +42,10 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
 
     return (
         <Layout>
-            <h1 className='font-bold text-4xl my-16 text-center'>
+            <h1 className='font-bold text-4xl mt-16 text-center'>
                 Fake a {NumberMetaMap.get(numberType).name} number
             </h1>
+            <h3 className='font-light text-2xl mb-16 text-center'>{NumberMetaMap.get(numberType).description}</h3>
 
             <div className='flex items-center justify-center'>
                 <Tab tabIndex={0}>
