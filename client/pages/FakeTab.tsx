@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import SampleCode from '../components/SampleCode';
+import Separator from '../components/Separator';
 import NumberType from '../constants/NumberType';
 import ClickToCopy from './ClickToCopy';
 
@@ -18,15 +19,19 @@ const FakeTab: React.FC<FakeTabProps> = ({ fake, numberType }) => {
             <ClickToCopy>{value}</ClickToCopy>
             <button className="border" onClick={generate}>Fake</button>
 
-            <div>API</div>
-            <SampleCode
-                code={`
+            <Separator>
+                <div className='text-2xl'>API</div>
+            </Separator>
+            <div className='p-6'>
+                <SampleCode
+                    code={`
 import { ${numberType} } from '@phuocng/fake-numbers';
 
 // Fake a number
 const number = ${numberType}.fake();
 `}
-            />
+                />
+            </div>
         </div>
     );
 };
