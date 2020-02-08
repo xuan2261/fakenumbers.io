@@ -7,6 +7,7 @@
  */
 
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import NumberCard from '../components/NumberCard';
 import NumberMetaMap from '../constants/NumberMetaMap';
@@ -28,9 +29,14 @@ const ListingPage = () => {
 
     return (
         <Layout>
-            <h1 className='font-bold text-4xl my-16 text-center'>
+            <Helmet>
+                <title>Fake Numbers - Supported numbers</title>
+            </Helmet>
+
+            <h1 className='font-bold text-4xl mt-16 text-center'>
                 Support {Object.values(NumberType).length} types of number
             </h1>
+            <h3 className='font-light text-2xl mb-16 text-center'>a lot more to come</h3>
             <div className='flex justify-center mb-8'>
                 <input
                     className='border border-gray-400 text-2xl p-4 rounded w-1/3'

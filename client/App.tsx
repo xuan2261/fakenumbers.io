@@ -13,6 +13,7 @@ import './index.css';
 
 import NumberType from './constants/NumberType';
 import DetailsPage from './pages/DetailsPage';
+import GuidePage from './pages/GuidePage';
 import HomePage from './pages/HomePage';
 import LicensePage from './pages/LicensePage';
 import ListingPage from './pages/ListingPage';
@@ -23,6 +24,7 @@ const App = () => {
             <RouteSwitch>
                 <Route exact={true} path='/'><HomePage /></Route>
                 <Route exact={true} path='/numbers'><ListingPage /></Route>
+                <Route exact={true} path='/guide'><GuidePage /></Route>
                 <Route exact={true} path='/license'><LicensePage /></Route>
                 <Route
                     path='/numbers/:numberType'

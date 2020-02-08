@@ -1,10 +1,3 @@
-import React, { useState, ChangeEvent } from 'react';
-import { CheckResult } from '@phuocng/fake-numbers';
-
-import SampleCode from '../components/SampleCode';
-import Separator from '../components/Separator';
-import NumberType from '../constants/NumberType';
-
 /**
  * Generate fake and valid numbers
  *
@@ -12,6 +5,13 @@ import NumberType from '../constants/NumberType';
  * @license https://fakenumbers.io/license
  * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
  */
+
+import React, { useState, ChangeEvent } from 'react';
+import { CheckResult } from '@phuocng/fake-numbers';
+
+import SampleCode from '../components/SampleCode';
+import Separator from '../components/Separator';
+import NumberType from '../constants/NumberType';
 
 interface CheckTabProps {
     numberType: NumberType;
@@ -24,16 +24,6 @@ const CheckTab: React.FC<CheckTabProps> = ({ check, numberType }) => {
 
     return (
         <div>
-            <div className='p-4'>
-                <SampleCode
-                    code={`
-import { ${numberType} } from '@phuocng/fake-numbers';
-
-// Check a number
-const isValid = ${numberType}.check('given number').valid;
-`}
-                />
-            </div>
             <div className='flex flex-col items-center py-24'>
                 <input
                     className='border border-gray-400 p-4 text-3xl w-2/3'
@@ -47,6 +37,37 @@ const isValid = ${numberType}.check('given number').valid;
                         : <div className='text-3xl py-3 text-red-800'>Invalid</div>
                 )}
             </div>
+
+            <section>
+                <Separator>JS API</Separator>
+                <div className='p-4'>
+                    <SampleCode
+                        code={`
+import { ${numberType} } from '@phuocng/fake-numbers';
+
+// Check a number
+const isValid = ${numberType}.check('given number').valid;
+`}
+                    />
+                </div>
+            </section>
+
+            <section>
+                <Separator>or</Separator>
+                <div className='p-4'>
+                    <SampleCode
+                        lang='html'
+                        code={`
+<script src="/vendors/@phuocng/fake-numbers/umd/fake-numbers.min.js"></script>
+
+<script>
+// Check a number
+const isValid = FakeNumbers.${numberType}.check('given number').valid;
+</script>
+`}
+                    />
+                </div>
+            </section>
         </div>
     );
 };

@@ -15,7 +15,7 @@ const Footer: React.FC<{}> = () => {
     return (
         <>
         <div className='my-12'><Separator /></div>
-        <div className='ml-auto mr-auto w-3/4 mb-16'>
+        <div className='ml-auto mr-auto max-w-4xl mb-16'>
             <div className='flex'>
                 <div className='flex-1'>
                     <h3 className='text-2xl font-semibold py-2'>FakeNumbers</h3>

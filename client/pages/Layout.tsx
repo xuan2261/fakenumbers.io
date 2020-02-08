@@ -19,7 +19,7 @@ const Layout: React.FC<{}> = ({ children }) => {
     return (
         <>
             <Header />
-            <div className='ml-auto mr-auto w-3/4'>
+            <div className='ml-auto mr-auto max-w-4xl'>
                 {children}
             </div>
             <Footer />
