@@ -9,19 +9,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Footer: React.FC<{}> = () => {
-    const zigZag = "url(\"data:image/svg+xml;utf-8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='9px' height='6px' viewBox='0 0 9 6'><polygon opacity='1' points='4.5,4.5 0,0 0,1.208 4.5,5.708 9,1.208 9,0' /></svg>\")";
+import Separator from '../components/Separator';
 
+const Footer: React.FC<{}> = () => {
     return (
         <>
-        <div
-            className='bg-repeat-x w-full h-2 my-12'
-            style={{ backgroundImage: zigZag }}
-        />
+        <div className='my-12'><Separator /></div>
         <div className='ml-auto mr-auto w-3/4 mb-16'>
             <div className='flex'>
                 <div className='flex-1'>
-                    <h3 className='text-2xl font-light py-2'>FakeNumbers</h3>
+                    <h3 className='text-2xl font-semibold py-2'>FakeNumbers</h3>
                     <ul>
                         <li><Link to='/numbers'>Supported Numbers</Link></li>
                         <li><Link to='/license'>License</Link></li>
@@ -38,7 +35,7 @@ const Footer: React.FC<{}> = () => {
                     </ul>
                 </div>
                 <div className='flex-1'>
-                    <h3 className='text-2xl font-light py-2'>Products</h3>
+                    <h3 className='text-2xl font-semibold py-2'>Products</h3>
                     <ul>
                         <li>
                             <a
@@ -87,7 +84,7 @@ const Footer: React.FC<{}> = () => {
                     </ul>
                 </div>
                 <div className='flex-1'>
-                    <h3 className='text-2xl font-light py-2'>Follow me</h3>
+                    <h3 className='text-2xl font-semibold py-2'>Follow me</h3>
                     <ul>
                         <li>
                             <a

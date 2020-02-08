@@ -15,7 +15,7 @@ interface NumberMeta {
 
 const NumberMetaMap: Map<NumberType, NumberMeta> = new Map([
     [ NumberType.Bic, { name: 'BIC', description: 'Business Identifier Code' } ],
-    [ NumberType.CreditCard, { name: 'Credit card', description: 'Credit card number' } ],
+    [ NumberType.CreditCard, { name: 'Credit card', description: 'Credit Card Number' } ],
     [ NumberType.Cusip, { name: 'CUSIP', description: 'Committee on Uniform Security Identification Procedures' } ],
     [ NumberType.Cvv, { name: 'CVV', description: 'Card Verification Value' } ],
     [ NumberType.Ean, { name: 'EAN', description: 'International Article Number' } ],
