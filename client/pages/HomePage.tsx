@@ -1,12 +1,21 @@
+/**
+ * Generate fake and valid numbers
+ *
+ * @see https://fakenumbers.io
+ * @license https://fakenumbers.io/license
+ * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
+ */
+
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import SampleCode from '../components/SampleCode';
+import Layout from'./Layout';
 
 const HomePage = () => {
     return (
-        <>
+        <Layout>
             <Helmet>
                 <title>Fake Numbers - Generate fake numbers</title>
                 <meta name="description" content="Generate fake numbers" />
@@ -32,7 +41,7 @@ creditCard.check(creditCardNumber).valid; // true
                     Supported numbers
                 </Link>
             </div>
-        </>
+        </Layout>
     );
 };
 

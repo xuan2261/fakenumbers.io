@@ -1,7 +1,14 @@
+/**
+ * Generate fake and valid numbers
+ *
+ * @see https://fakenumbers.io
+ * @license https://fakenumbers.io/license
+ * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
+ */
+
 import React, { useEffect } from 'react';
 
 import Footer from './Footer';
-import Github from './Github';
 
 const Layout: React.FC<{}> = ({ children }) => {
     useEffect(() => {
@@ -10,7 +17,7 @@ const Layout: React.FC<{}> = ({ children }) => {
 
     return (
         <>
-            <div>
+            <div className='ml-auto mr-auto w-3/4'>
                 {children}
             </div>
             <Footer />

@@ -1,9 +1,16 @@
+/**
+ * Generate fake and valid numbers
+ *
+ * @see https://fakenumbers.io
+ * @license https://fakenumbers.io/license
+ * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
+ */
+
 import React, { useState } from 'react';
 import * as fakeNumbers from '@phuocng/fake-numbers';
 
 import NumberMetaMap from '../constants/NumberMetaMap';
 import NumberType from '../constants/NumberType';
-
 import CheckTab from './CheckTab';
 import FakeTab from './FakeTab';
 import Layout from './Layout';
@@ -35,23 +42,21 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
 
     return (
         <Layout>
-            <h1 className='text-6xl my-16 text-center'>
+            <h1 className='text-4xl my-16 text-center'>
                 Fake a {NumberMetaMap.get(numberType).name} number
             </h1>
 
-            <div className='ml-auto mr-auto w-3/4'>
-                <div className='flex items-center justify-center'>
-                    <Tab tabIndex={0}>
-                        Fake
-                    </Tab>
-                    <Tab tabIndex={1}>
-                        Check
-                    </Tab>
-                </div>
-                <div className='border border-gray-400'>
-                    { activeTab === 0 && <FakeTab numberType={numberType} fake={fake} /> }
-                    { activeTab === 1 && <CheckTab numberType={numberType} check={check} /> }
-                </div>
+            <div className='flex items-center justify-center'>
+                <Tab tabIndex={0}>
+                    Fake
+                </Tab>
+                <Tab tabIndex={1}>
+                    Check
+                </Tab>
+            </div>
+            <div className='border border-gray-400'>
+                { activeTab === 0 && <FakeTab numberType={numberType} fake={fake} /> }
+                { activeTab === 1 && <CheckTab numberType={numberType} check={check} /> }
             </div>
         </Layout>
     );

@@ -1,3 +1,11 @@
+/**
+ * Generate fake and valid numbers
+ *
+ * @see https://fakenumbers.io
+ * @license https://fakenumbers.io/license
+ * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
+ */
+
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');

@@ -5,6 +5,14 @@ import SampleCode from '../components/SampleCode';
 import Separator from '../components/Separator';
 import NumberType from '../constants/NumberType';
 
+/**
+ * Generate fake and valid numbers
+ *
+ * @see https://fakenumbers.io
+ * @license https://fakenumbers.io/license
+ * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
+ */
+
 interface CheckTabProps {
     numberType: NumberType;
     check: (value: string) => CheckResult<any>;
