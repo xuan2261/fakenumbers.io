@@ -6,6 +6,7 @@ import NumberType from '../constants/NumberType';
 
 import CheckTab from './CheckTab';
 import FakeTab from './FakeTab';
+import Layout from './Layout';
 
 interface DetailsPageProps {
     numberType: NumberType;
@@ -33,7 +34,7 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
     };
 
     return (
-        <div>
+        <Layout>
             <h1 className='text-6xl my-16 text-center'>
                 Fake a {NumberMetaMap.get(numberType).name} number
             </h1>
@@ -52,7 +53,7 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
                     { activeTab === 1 && <CheckTab numberType={numberType} check={check} /> }
                 </div>
             </div>
-        </div>
+        </Layout>
     );
 };
 
