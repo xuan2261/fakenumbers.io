@@ -6,7 +6,7 @@
  * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 
 import Layout from './Layout';
 
