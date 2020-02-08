@@ -9,6 +9,7 @@
 import React, { useEffect } from 'react';
 
 import Footer from './Footer';
+import Header from './Header';
 
 const Layout: React.FC<{}> = ({ children }) => {
     useEffect(() => {
@@ -17,6 +18,7 @@ const Layout: React.FC<{}> = ({ children }) => {
 
     return (
         <>
+            <Header />
             <div className='ml-auto mr-auto w-3/4'>
                 {children}
             </div>
