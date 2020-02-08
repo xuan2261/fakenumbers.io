@@ -39,19 +39,17 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
                 Fake a {NumberMetaMap.get(numberType).name} number
             </h1>
 
-            <div className='ml-auto mr-auto w-3/4'>
-                <div className='flex items-center justify-center'>
-                    <Tab tabIndex={0}>
-                        Fake
-                    </Tab>
-                    <Tab tabIndex={1}>
-                        Check
-                    </Tab>
-                </div>
-                <div className='border border-gray-400'>
-                    { activeTab === 0 && <FakeTab numberType={numberType} fake={fake} /> }
-                    { activeTab === 1 && <CheckTab numberType={numberType} check={check} /> }
-                </div>
+            <div className='flex items-center justify-center'>
+                <Tab tabIndex={0}>
+                    Fake
+                </Tab>
+                <Tab tabIndex={1}>
+                    Check
+                </Tab>
+            </div>
+            <div className='border border-gray-400'>
+                { activeTab === 0 && <FakeTab numberType={numberType} fake={fake} /> }
+                { activeTab === 1 && <CheckTab numberType={numberType} check={check} /> }
             </div>
         </Layout>
     );
