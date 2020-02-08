@@ -28,7 +28,7 @@ const ListingPage = () => {
 
     return (
         <Layout>
-            <h1 className='text-4xl my-16 text-center'>
+            <h1 className='font-bold text-4xl my-16 text-center'>
                 Support {Object.values(NumberType).length} types of number
             </h1>
             <div className='flex justify-center mb-8'>
