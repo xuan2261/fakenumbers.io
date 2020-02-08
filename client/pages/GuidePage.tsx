@@ -42,7 +42,8 @@ npm install @phuocng/fake-numbers
             <h2 className='text-3xl mt-8'>2. Fake a number</h2>
             <blockquote className='border-l-2 border-black pl-2 my-2'>
                 The following sample code generates a fake credit card number. You can replace <code>creditCard</code>
-                with other namespace that represents other <Link className='border-b border-black' to='/numbers'>supported numbers</Link>.
+                with other namespace that represents other
+                <Link className='border-b border-black' to='/numbers'>supported numbers</Link>.
             </blockquote>
             <p className='py-2'>— If you are using the npm package:</p>
             <SampleCode
@@ -64,8 +65,9 @@ const number = FakeNumbers.creditCard.fake();
 
             <h2 className='text-3xl mt-8'>3. Check a number</h2>
             <blockquote className='border-l-2 border-black pl-2 my-2'>
-                The following sample code check if a given number is a valid credit card number. You can replace <code>creditCard</code>
-                with other namespace that represents other <Link className='border-b border-black' to='/numbers'>supported numbers</Link>.
+                The following sample code check if a given number is a valid credit card number.
+                You can replace <code>creditCard</code> with other namespace that represents other
+                <Link className='border-b border-black' to='/numbers'>supported numbers</Link>.
             </blockquote>
             <p className='py-2'>— If you are using the npm package:</p>
             <SampleCode

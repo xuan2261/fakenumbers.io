@@ -9,8 +9,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import NumberType from '../constants/NumberType';
 import NumberMetaMap from '../constants/NumberMetaMap';
+import NumberType from '../constants/NumberType';
 
 interface NumberCardProps {
     numberType: NumberType;

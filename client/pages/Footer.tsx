@@ -122,7 +122,10 @@ const Footer: React.FC<{}> = () => {
 
             <div className='pt-4'>
                 <div>© 2020 Nguyen Huu Phuoc. All rights reserved.</div>
-                <div>This site is <a className="border-b border-black" href="https://github.com/phuoc-ng/fakenumbers.io" rel="noopener noreferrer" target="_blank">open source</a></div>
+                <div>
+                    This site is
+                    <a className="border-b border-black" href="https://github.com/phuoc-ng/fakenumbers.io" rel="noopener noreferrer" target="_blank">open source</a>
+                </div>
             </div>
         </div>
         </>

@@ -35,7 +35,7 @@ const FakeTab: React.FC<FakeTabProps> = ({ fake, numberType }) => {
                         className='absolute top-0 right-0 bg-black text-white text-sm p-1'
                         style={{ transform: 'translate(0, -100%)' }}
                     >
-                        { copied ? 'copied' : 'select to copy' }
+                        {copied ? 'copied' : 'select to copy'}
                     </div>
                     <ClickToCopy onCopied={onCopied}>{value}</ClickToCopy>
                 </div>

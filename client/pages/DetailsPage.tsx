@@ -6,9 +6,9 @@
  * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
  */
 
+import * as fakeNumbers from '@phuocng/fake-numbers';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import * as fakeNumbers from '@phuocng/fake-numbers';
 
 import NumberMetaMap from '../constants/NumberMetaMap';
 import NumberType from '../constants/NumberType';
@@ -42,7 +42,6 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
         );
     };
 
-
     return (
         <Layout>
             <Helmet>
@@ -64,8 +63,8 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
                 </Tab>
             </div>
             <div className='border border-gray-400'>
-                { activeTab === 0 && <FakeTab numberType={numberType} fake={fake} /> }
-                { activeTab === 1 && <CheckTab numberType={numberType} check={check} /> }
+                {activeTab === 0 && <FakeTab numberType={numberType} fake={fake} />}
+                {activeTab === 1 && <CheckTab numberType={numberType} check={check} />}
             </div>
         </Layout>
     );
