@@ -16,14 +16,18 @@ const CheckTab: React.FC<CheckTabProps> = ({ check, numberType }) => {
 
     return (
         <div>
-            <input
-                className="border"
-                placeholder="Type the number"
-                value={value}
-                onChange={changeNumber}
-            />
-            <div>
-                { value && (check(value).valid ? 'Valid' : ' Invalid') }
+            <div className='flex flex-col items-center py-32'>
+                <input
+                    className='border-4 border-gray-400 p-4 rounded-lg text-5xl w-1/2'
+                    placeholder='Type the number'
+                    value={value}
+                    onChange={changeNumber}
+                />
+                { value && (
+                    check(value).valid
+                        ? <div className='my-8 text-4xl px-4 py-3 bg-green-400 text-white'>Valid</div>
+                        : <div className='my-8 text-4xl px-4 py-3 bg-red-800 text-white'>Invalid</div>
+                )}
             </div>
 
             <Separator>

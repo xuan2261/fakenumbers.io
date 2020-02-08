@@ -35,14 +35,8 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
         <div>
             <div>Type: {numberType}</div>
 
-            <div>
-                <div
-                    style={{
-                        alignItems: 'center',
-                        display: 'flex',
-                        justifyContent: 'center',
-                    }}
-                >
+            <div className='ml-auto mr-auto w-3/4'>
+                <div className='flex items-center justify-center'>
                     <Tab tabIndex={0}>
                         Fake
                     </Tab>
