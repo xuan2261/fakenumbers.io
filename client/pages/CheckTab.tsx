@@ -18,7 +18,7 @@ const CheckTab: React.FC<CheckTabProps> = ({ check, numberType }) => {
         <div>
             <div className='flex flex-col items-center py-32'>
                 <input
-                    className='border-4 border-gray-400 p-4 rounded-lg text-5xl w-1/2'
+                    className='border-4 border-gray-400 p-4 text-5xl w-2/3'
                     placeholder='Type the number'
                     value={value}
                     onChange={changeNumber}

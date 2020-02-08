@@ -12,16 +12,27 @@ interface FakeTabProps {
 
 const FakeTab: React.FC<FakeTabProps> = ({ fake, numberType }) => {
     const [value, setValue] = useState(fake());
-    const generate = () => setValue(fake());
+    const [copied, setCopied] = useState(false);
+    const generate = () => {
+        setValue(fake());
+        setCopied(false);
+    };
+    const onCopied = () => setCopied(true);
 
     return (
         <div>
             <div className='flex flex-col items-center py-32'>
-                <div className='border-4 border-gray-400 p-4 rounded-lg'>
-                    <ClickToCopy>{value}</ClickToCopy>
+                <div className='border-4 border-gray-400 p-8 relative w-2/3 text-center'>
+                    <div
+                        className='absolute top-0 right-0 bg-black text-white text-sm p-1'
+                        style={{ transform: 'translate(100%, -4px)' }}
+                    >
+                        { copied ? 'copied' : 'select to copy' }
+                    </div>
+                    <ClickToCopy onCopied={onCopied}>{value}</ClickToCopy>
                 </div>
                 <button
-                    className='bg-green-400 border-none font-light my-8 px-4 py-3 rounded-lg text-4xl text-white'
+                    className='bg-blue-400 border-none font-light my-8 px-4 py-3 rounded-lg text-4xl text-white'
                     onClick={generate}
                 >
                     Fake

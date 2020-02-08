@@ -1,7 +1,14 @@
 import React from 'react';
 
-const ClickToCopy: React.FC<{}> = ({ children }) => {
-    const copy = () => document.execCommand('copy');
+interface ClickToCopyProps {
+    onCopied?: () => void;
+}
+
+const ClickToCopy: React.FC<ClickToCopyProps> = ({ children, onCopied }) => {
+    const copy = () => {
+        document.execCommand('copy');
+        onCopied();
+    }
 
     return (
         <div className='select-all text-5xl' onClick={copy}>
