@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import SampleCode from '../components/SampleCode';
@@ -15,6 +16,10 @@ import Layout from './Layout';
 const GuidePage = () => {
     return (
         <Layout>
+            <Helmet>
+                <title>Fake Numbers - Developer Guide</title>
+            </Helmet>
+
             <h1 className='font-bold text-4xl my-16 text-center'>
                 Developer Guide
             </h1>

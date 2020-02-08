@@ -7,6 +7,7 @@
  */
 
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import * as fakeNumbers from '@phuocng/fake-numbers';
 
 import NumberMetaMap from '../constants/NumberMetaMap';
@@ -26,6 +27,7 @@ interface TabProps {
 const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
     const [activeTab, setActiveTab] = useState(0);
     const { fake, check } = fakeNumbers[numberType];
+    const meta = NumberMetaMap.get(numberType);
 
     const Tab: React.FC<TabProps> = ({ tabIndex, children }) => {
         const isActive = tabIndex === activeTab;
@@ -40,12 +42,18 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
         );
     };
 
+
     return (
         <Layout>
+            <Helmet>
+                <title>Fake Numbers - Fake a {meta.name} number</title>
+                <meta name='description' content={`Fake a ${meta.name} (${meta.description}) number`} />
+            </Helmet>
+
             <h1 className='font-bold text-4xl mt-16 text-center'>
-                Fake a {NumberMetaMap.get(numberType).name} number
+                Fake a {meta.name} number
             </h1>
-            <h3 className='font-light text-2xl mb-16 text-center'>{NumberMetaMap.get(numberType).description}</h3>
+            <h3 className='font-light text-2xl mb-16 text-center'>{meta.description}</h3>
 
             <div className='flex items-center justify-center'>
                 <Tab tabIndex={0}>

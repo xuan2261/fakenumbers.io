@@ -7,14 +7,19 @@
  */
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Layout from './Layout';
 
 const LicensePage = () => {
     return (
         <Layout>
+            <Helmet>
+                <title>Fake Numbers - Licensing Agreement</title>
+            </Helmet>
+
             <h1 className='font-bold text-4xl my-16 text-center'>
-                Licensing agreement
+                Licensing Agreement
             </h1>
             <p>By purchasing resource ("item" or "file") you are being granted a license to use these files for specific uses under certain conditions.</p>
             <ul className='list-inside list-decimal'>
