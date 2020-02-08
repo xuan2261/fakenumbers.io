@@ -1,3 +1,11 @@
+/**
+ * Generate fake and valid numbers
+ *
+ * @see https://fakenumbers.io
+ * @license https://fakenumbers.io/license
+ * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
+ */
+
 import hljs from 'highlight.js/lib/highlight'; // tslint:disable-line
 import javascript from 'highlight.js/lib/languages/javascript'; // tslint:disable-line
 import html from 'highlight.js/lib/languages/xml'; // tslint:disable-line

@@ -1,9 +1,16 @@
+/**
+ * Generate fake and valid numbers
+ *
+ * @see https://fakenumbers.io
+ * @license https://fakenumbers.io/license
+ * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
+ */
+
 import React, { useState } from 'react';
 import * as fakeNumbers from '@phuocng/fake-numbers';
 
 import NumberMetaMap from '../constants/NumberMetaMap';
 import NumberType from '../constants/NumberType';
-
 import CheckTab from './CheckTab';
 import FakeTab from './FakeTab';
 import Layout from './Layout';

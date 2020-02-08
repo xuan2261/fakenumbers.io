@@ -1,7 +1,14 @@
+/**
+ * Generate fake and valid numbers
+ *
+ * @see https://fakenumbers.io
+ * @license https://fakenumbers.io/license
+ * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
+ */
+
 import React, { useState } from 'react';
 
 import SampleCode from '../components/SampleCode';
-import Separator from '../components/Separator';
 import NumberType from '../constants/NumberType';
 import ClickToCopy from './ClickToCopy';
 
