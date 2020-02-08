@@ -11,7 +11,7 @@ const ClickToCopy: React.FC<ClickToCopyProps> = ({ children, onCopied }) => {
     }
 
     return (
-        <div className='select-all text-5xl' onClick={copy}>
+        <div className='cursor-pointer select-all text-3xl p-4 bg-gray-200 border border-gray-400' onClick={copy}>
             {children}
         </div>
     );

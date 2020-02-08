@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import * as fakeNumbers from '@phuocng/fake-numbers';
 
+import NumberMetaMap from '../constants/NumberMetaMap';
 import NumberType from '../constants/NumberType';
 
 import CheckTab from './CheckTab';
@@ -23,7 +24,7 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
         const click = () => setActiveTab(tabIndex);
         return (
             <div
-                className={`border-b-4 cursor-pointer px-5 py-3 text-2xl ${isActive ? 'border-red-400 font-bold' : 'border-transparent font-light'}`}
+                className={`border-t-4 cursor-pointer px-8 py-1 text-2xl ${isActive ? 'border-gray-900 font-bold' : 'border-transparent font-light'}`}
                 onClick={click}
             >
                 {children}
@@ -33,7 +34,9 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
 
     return (
         <div>
-            <div>Type: {numberType}</div>
+            <h1 className='text-6xl my-16 text-center'>
+                Fake a {NumberMetaMap.get(numberType).name} number
+            </h1>
 
             <div className='ml-auto mr-auto w-3/4'>
                 <div className='flex items-center justify-center'>

@@ -16,24 +16,7 @@ const CheckTab: React.FC<CheckTabProps> = ({ check, numberType }) => {
 
     return (
         <div>
-            <div className='flex flex-col items-center py-32'>
-                <input
-                    className='border-4 border-gray-400 p-4 text-5xl w-2/3'
-                    placeholder='Type the number'
-                    value={value}
-                    onChange={changeNumber}
-                />
-                { value && (
-                    check(value).valid
-                        ? <div className='my-8 text-4xl px-4 py-3 bg-green-400 text-white'>Valid</div>
-                        : <div className='my-8 text-4xl px-4 py-3 bg-red-800 text-white'>Invalid</div>
-                )}
-            </div>
-
-            <Separator>
-                <div className='text-2xl'>API</div>
-            </Separator>
-            <div className='p-6'>
+            <div className='p-4'>
                 <SampleCode
                     code={`
 import { ${numberType} } from '@phuocng/fake-numbers';
@@ -42,6 +25,19 @@ import { ${numberType} } from '@phuocng/fake-numbers';
 const isValid = ${numberType}.check('given number').valid;
 `}
                 />
+            </div>
+            <div className='flex flex-col items-center py-24'>
+                <input
+                    className='border border-gray-400 p-4 text-3xl w-2/3'
+                    placeholder='Type the number'
+                    value={value}
+                    onChange={changeNumber}
+                />
+                { value && (
+                    check(value).valid
+                        ? <div className='text-3xl py-3 text-green-400'>Valid</div>
+                        : <div className='text-3xl py-3 text-red-800'>Invalid</div>
+                )}
             </div>
         </div>
     );

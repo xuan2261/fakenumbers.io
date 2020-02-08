@@ -21,36 +21,32 @@ const FakeTab: React.FC<FakeTabProps> = ({ fake, numberType }) => {
 
     return (
         <div>
-            <div className='flex flex-col items-center py-32'>
-                <div className='border-4 border-gray-400 p-8 relative w-2/3 text-center'>
+            <div className='p-4'>
+                <SampleCode
+                    code={`
+import { ${numberType} } from '@phuocng/fake-numbers';
+
+// Fake a number
+const number = ${numberType}.fake(); // ${value}
+`}
+                />
+            </div>
+            <div className='flex flex-col items-center py-24'>
+                <div className='relative w-2/3 text-center'>
                     <div
                         className='absolute top-0 right-0 bg-black text-white text-sm p-1'
-                        style={{ transform: 'translate(100%, -4px)' }}
+                        style={{ transform: 'translate(0, -100%)' }}
                     >
                         { copied ? 'copied' : 'select to copy' }
                     </div>
                     <ClickToCopy onCopied={onCopied}>{value}</ClickToCopy>
                 </div>
                 <button
-                    className='bg-blue-400 border-none font-light my-8 px-4 py-3 rounded-lg text-4xl text-white'
+                    className='bg-black border-none font-light my-8 px-4 py-3 text-3xl text-white'
                     onClick={generate}
                 >
-                    Fake
+                    Fake a number
                 </button>
-            </div>
-
-            <Separator>
-                <div className='text-2xl'>API</div>
-            </Separator>
-            <div className='p-6'>
-                <SampleCode
-                    code={`
-import { ${numberType} } from '@phuocng/fake-numbers';
-
-// Fake a number
-const number = ${numberType}.fake();
-`}
-                />
             </div>
         </div>
     );
