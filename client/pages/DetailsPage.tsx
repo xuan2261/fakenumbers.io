@@ -35,7 +35,7 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
 
     return (
         <Layout>
-            <h1 className='text-6xl my-16 text-center'>
+            <h1 className='text-4xl my-16 text-center'>
                 Fake a {NumberMetaMap.get(numberType).name} number
             </h1>
 
