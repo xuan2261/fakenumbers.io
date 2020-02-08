@@ -9,6 +9,7 @@
 import React, { useState } from 'react';
 
 import SampleCode from '../components/SampleCode';
+import Separator from '../components/Separator';
 import NumberType from '../constants/NumberType';
 import ClickToCopy from './ClickToCopy';
 
@@ -28,16 +29,6 @@ const FakeTab: React.FC<FakeTabProps> = ({ fake, numberType }) => {
 
     return (
         <div>
-            <div className='p-4'>
-                <SampleCode
-                    code={`
-import { ${numberType} } from '@phuocng/fake-numbers';
-
-// Fake a number
-const number = ${numberType}.fake(); // ${value}
-`}
-                />
-            </div>
             <div className='flex flex-col items-center py-24'>
                 <div className='relative w-2/3 text-center'>
                     <div
@@ -55,6 +46,37 @@ const number = ${numberType}.fake(); // ${value}
                     Fake a number
                 </button>
             </div>
+
+            <section>
+                <Separator>JS API</Separator>
+                <div className='p-4'>
+                    <SampleCode
+                        code={`
+import { ${numberType} } from '@phuocng/fake-numbers';
+
+// Fake a number
+const number = ${numberType}.fake(); // ${value}
+`}
+                    />
+                </div>
+            </section>
+
+            <section>
+                <Separator>or</Separator>
+                <div className='p-4'>
+                    <SampleCode
+                        lang='html'
+                        code={`
+<script src="/vendors/@phuocng/fake-numbers/umd/fake-numbers.min.js"></script>
+
+<script>
+// Fake a number
+const number = FakeNumbers.${numberType}.fake(); // ${value}
+</script>
+`}
+                    />
+                </div>
+            </section>
         </div>
     );
 };
