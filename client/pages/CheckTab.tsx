@@ -6,8 +6,8 @@
  * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
  */
 
-import React, { useState, ChangeEvent } from 'react';
 import { CheckResult } from '@phuocng/fake-numbers';
+import React, { useState } from 'react';
 
 import SampleCode from '../components/SampleCode';
 import Separator from '../components/Separator';
@@ -20,7 +20,7 @@ interface CheckTabProps {
 
 const CheckTab: React.FC<CheckTabProps> = ({ check, numberType }) => {
     const [value, setValue] = useState('');
-    const changeNumber = (e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value);
+    const changeNumber = (e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value);
 
     return (
         <div>

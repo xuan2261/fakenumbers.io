@@ -24,7 +24,7 @@ const ListingPage = () => {
                 : allTypes.filter((v) => {
                     const { description, name } = NumberMetaMap.get(v);
                     const lookFor = keyword.toLowerCase();
-                    return name.toLowerCase().includes(lookFor) || description.toLowerCase().includes(lookFor)
+                    return name.toLowerCase().includes(lookFor) || description.toLowerCase().includes(lookFor);
                 });
 
     return (
@@ -52,7 +52,6 @@ const ListingPage = () => {
                 : (
                     <div className='flex flex-wrap' style={{ marginLeft: '-1rem', marginRight: '-1rem' }}>
                         {
-                            
                             types.map((type) => {
                                 return (
                                     <NumberCard
