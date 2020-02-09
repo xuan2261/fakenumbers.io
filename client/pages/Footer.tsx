@@ -16,12 +16,14 @@ const Footer: React.FC<{}> = () => {
         <>
         <div className='my-12'><Separator /></div>
         <div className='ml-auto mr-auto max-w-4xl mb-16 px-2 lg:px-0'>
-            <div className='md:flex'>
+            <div className='sm:flex'>
                 <div className='flex-1'>
                     <h3 className='text-2xl font-semibold py-2'>FakeNumbers</h3>
                     <ul>
                         <li><Link to='/numbers'>Supported Numbers</Link></li>
+                        <li><Link to='/guide'>Guide</Link></li>
                         <li><Link to='/license'>License</Link></li>
+                        <li><Link className='px-2 py-1 bg-black text-white rounded' to='/buy'>Buy</Link></li>
                         <li>
                             <a
                                 href="https://github.com/phuoc-ng/fake-numbers"
