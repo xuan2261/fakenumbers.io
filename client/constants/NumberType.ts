@@ -8,6 +8,9 @@
 
 enum NumberType {
     Bic = 'bic',
+    Btw = 'btw',
+    Cnpj = 'cnpj',
+    Cpf = 'cpf',
     CreditCard = 'creditCard',
     Cusip = 'cusip',
     Cvv = 'cvv',
@@ -18,12 +21,16 @@ enum NumberType {
     Isin = 'isin',
     Ismn = 'ismn',
     Issn = 'issn',
+    Nif = 'nif',
     Npi = 'npi',
     Nric = 'nric',
     Rtn = 'rtn',
     Sedol = 'sedol',
     Sin = 'sin',
+    Siren = 'siren',
+    Siret = 'siret',
     Ssn = 'ssn',
+    Uid = 'uid',
     Vin = 'vin',
 }
 
