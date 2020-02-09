@@ -21,7 +21,9 @@ const Footer: React.FC<{}> = () => {
                     <h3 className='text-2xl font-semibold py-2'>FakeNumbers</h3>
                     <ul>
                         <li><Link to='/numbers'>Supported Numbers</Link></li>
+                        <li><Link to='/guide'>Guide</Link></li>
                         <li><Link to='/license'>License</Link></li>
+                        <li><Link className='px-2 py-1 bg-black text-white rounded' to='/buy'>Buy</Link></li>
                         <li>
                             <a
                                 href="https://github.com/phuoc-ng/fake-numbers"
