@@ -5,6 +5,9 @@
     <url><loc>https://fakenumbers.io/numbers</loc></url>
 
     <url><loc>https://fakenumbers.io/numbers/bic</loc></url>
+    <url><loc>https://fakenumbers.io/numbers/btw</loc></url>
+    <url><loc>https://fakenumbers.io/numbers/cnpj</loc></url>
+    <url><loc>https://fakenumbers.io/numbers/cpf</loc></url>
     <url><loc>https://fakenumbers.io/numbers/creditCard</loc></url>
     <url><loc>https://fakenumbers.io/numbers/cusip</loc></url>
     <url><loc>https://fakenumbers.io/numbers/cvv</loc></url>
@@ -15,11 +18,15 @@
     <url><loc>https://fakenumbers.io/numbers/isin</loc></url>
     <url><loc>https://fakenumbers.io/numbers/ismn</loc></url>
     <url><loc>https://fakenumbers.io/numbers/issn</loc></url>
+    <url><loc>https://fakenumbers.io/numbers/nif</loc></url>
     <url><loc>https://fakenumbers.io/numbers/npi</loc></url>
     <url><loc>https://fakenumbers.io/numbers/nric</loc></url>
     <url><loc>https://fakenumbers.io/numbers/rtn</loc></url>
     <url><loc>https://fakenumbers.io/numbers/sedol</loc></url>
     <url><loc>https://fakenumbers.io/numbers/sin</loc></url>
+    <url><loc>https://fakenumbers.io/numbers/siren</loc></url>
+    <url><loc>https://fakenumbers.io/numbers/siret</loc></url>
     <url><loc>https://fakenumbers.io/numbers/ssn</loc></url>
+    <url><loc>https://fakenumbers.io/numbers/uid</loc></url>
     <url><loc>https://fakenumbers.io/numbers/vin</loc></url>
 </urlset>
