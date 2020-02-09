@@ -2,7 +2,7 @@
     "name": "@phuocng/fakenumbers.io",
     "description": "The official website of FakeNumbers",
     "scripts": {
-        "copy": "rimraf dist && mkdir dist && cp public/* dist",
+        "copy": "rimraf dist && mkdir dist && cp -rf public/* dist",
         "dev": "npm run copy && webpack --mode development",
         "dev-server": "npm run copy && webpack-dev-server",
         "build": "npm run copy && webpack --mode production && npm run export",
