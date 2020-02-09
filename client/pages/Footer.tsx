@@ -15,8 +15,8 @@ const Footer: React.FC<{}> = () => {
     return (
         <>
         <div className='my-12'><Separator /></div>
-        <div className='ml-auto mr-auto max-w-4xl mb-16'>
-            <div className='flex'>
+        <div className='ml-auto mr-auto max-w-4xl mb-16 px-2 lg:px-0'>
+            <div className='md:flex'>
                 <div className='flex-1'>
                     <h3 className='text-2xl font-semibold py-2'>FakeNumbers</h3>
                     <ul>
@@ -123,8 +123,8 @@ const Footer: React.FC<{}> = () => {
             <div className='pt-4'>
                 <div>© 2020 Nguyen Huu Phuoc. All rights reserved.</div>
                 <div>
-                    This site is
-                    <a className="border-b border-black" href="https://github.com/phuoc-ng/fakenumbers.io" rel="noopener noreferrer" target="_blank">open source</a>
+                    This site
+                    is <a className="border-b border-black" href="https://github.com/phuoc-ng/fakenumbers.io" rel="noopener noreferrer" target="_blank">open source</a>
                 </div>
             </div>
         </div>
