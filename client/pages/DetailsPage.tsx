@@ -54,10 +54,10 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
                 <meta name='description' content={`Fake a ${meta.name} (${meta.description}) number`} />
             </Helmet>
 
-            <h1 className='font-bold text-4xl mt-16 text-center'>
+            <h1 className='font-bold text-2xl md:text-4xl mt-16 text-center'>
                 Fake a {meta.name} number
             </h1>
-            <h3 className='font-light text-2xl mb-16 text-center'>{meta.description}</h3>
+            <h3 className='font-light text-xl md:text-2xl mb-16 text-center'>{meta.description}</h3>
 
             <div className='flex items-center justify-center'>
                 <Tab tabIndex={0}>
@@ -74,6 +74,7 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
             <div className='flex justify-between my-8'>
                 {index > 0 && (
                     <Link
+                        className='flex-1'
                         to={`/numbers/${types[index - 1]}`}
                         title={NumberMetaMap.get(types[index - 1]).description}
                     >
@@ -83,7 +84,7 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
                 )}
                 {index < numTypes - 1 && (
                     <Link
-                        className='ml-auto text-right'
+                        className='flex-1 text-right'
                         title={NumberMetaMap.get(types[index + 1]).description}
                         to={`/numbers/${types[index + 1]}`}
                     >

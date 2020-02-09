@@ -33,13 +33,13 @@ const ListingPage = () => {
                 <title>Fake Numbers - Supported numbers</title>
             </Helmet>
 
-            <h1 className='font-bold text-4xl mt-16 text-center'>
+            <h1 className='font-bold text-2xl md:text-4xl mt-16 text-center'>
                 Support {Object.values(NumberType).length} types of number
             </h1>
-            <h3 className='font-light text-2xl mb-16 text-center'>a lot more to come</h3>
+            <h3 className='font-light text-xl md:text-2xl mb-16 text-center'>a lot more to come</h3>
             <div className='flex justify-center mb-8'>
                 <input
-                    className='border border-gray-400 text-2xl p-4 rounded w-1/3'
+                    className='border border-gray-400 text-2xl p-2 md:p-4 rounded w-1/2 sm:w-1/3'
                     placeholder='Filter'
                     onChange={filter}
                 />
@@ -50,7 +50,7 @@ const ListingPage = () => {
                     <div className='flex items-center justify-center text-2xl'>Couldn't found any supported number</div>
                 )
                 : (
-                    <div className='flex flex-wrap' style={{ marginLeft: '-1rem', marginRight: '-1rem' }}>
+                    <div className='flex flex-wrap -ml-2 -mr-2'>
                         {
                             types.map((type) => {
                                 return (

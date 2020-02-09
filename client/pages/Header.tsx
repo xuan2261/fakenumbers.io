@@ -14,13 +14,13 @@ import Separator from '../components/Separator';
 const Header = () => {
     return (
         <>
-            <div className='ml-auto mr-auto max-w-4xl flex items-center py-4'>
+            <div className='ml-auto mr-auto max-w-4xl flex items-center py-4 px-2 lg:px-0'>
                 <div className='text-2xl'><Link to='/'>FakeNumbers</Link></div>
-                <ul className='ml-auto flex items-center'>
-                    <li className='px-2'><Link to='/numbers'>Supported Numbers</Link></li>
-                    <li className='px-2'><Link to='/guide'>Guide</Link></li>
-                    <li className='px-2'><Link to='/license'>License</Link></li>
-                </ul>
+                <div className='ml-auto flex items-center'>
+                    <div className='px-2'><Link to='/numbers'>Numbers</Link></div>
+                    <div className='px-2'><Link to='/guide'>Guide</Link></div>
+                    <div className='px-2'><Link to='/license'>License</Link></div>
+                </div>
             </div>
             <Separator />
         </>

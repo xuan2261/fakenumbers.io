@@ -43,7 +43,7 @@ const FakeTab: React.FC<FakeTabProps> = ({ fake, numberType }) => {
                     <ClickToCopy onCopied={onCopied}>{value}</ClickToCopy>
                 </div>
                 <button
-                    className='bg-black border-none font-light my-8 px-4 py-3 text-3xl text-white'
+                    className='bg-black border-none font-light my-8 px-4 py-3 text-2xl md:text-3xl text-white'
                     onClick={generate}
                 >
                     Fake a number
