@@ -1,7 +1,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-    <url><loc>https://fakenumbers.io/numbers</loc></url>
+    <url><loc>https://fakenumbers.io/buy</loc></url>
     <url><loc>https://fakenumbers.io/guide</loc></url>
     <url><loc>https://fakenumbers.io/license</loc></url>
+    <url><loc>https://fakenumbers.io/numbers</loc></url>
 
     <url><loc>https://fakenumbers.io/numbers/bic</loc></url>
     <url><loc>https://fakenumbers.io/numbers/creditCard</loc></url>

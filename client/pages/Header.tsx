@@ -20,6 +20,7 @@ const Header = () => {
                     <div className='px-2'><Link to='/numbers'>Numbers</Link></div>
                     <div className='px-2'><Link to='/guide'>Guide</Link></div>
                     <div className='px-2'><Link to='/license'>License</Link></div>
+                    <div className='px-2'><Link to='/buy'>Buy</Link></div>
                 </div>
             </div>
             <Separator />
