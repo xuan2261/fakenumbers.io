@@ -9,6 +9,7 @@
 import * as fakeNumbers from '@phuocng/fake-numbers';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 import NumberMetaMap from '../constants/NumberMetaMap';
 import NumberType from '../constants/NumberType';
@@ -28,6 +29,10 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
     const [activeTab, setActiveTab] = useState(0);
     const { fake, check } = fakeNumbers[numberType];
     const meta = NumberMetaMap.get(numberType);
+
+    const types = Object.values(NumberType);
+    const index = types.indexOf(numberType);
+    const numTypes = types.length;
 
     const Tab: React.FC<TabProps> = ({ tabIndex, children }) => {
         const isActive = tabIndex === activeTab;
@@ -65,6 +70,27 @@ const DetailsPage: React.FC<DetailsPageProps> = ({ numberType }) => {
             <div className='border border-gray-400'>
                 {activeTab === 0 && <FakeTab numberType={numberType} fake={fake} />}
                 {activeTab === 1 && <CheckTab numberType={numberType} check={check} />}
+            </div>
+            <div className='flex justify-between my-8'>
+                {index > 0 && (
+                    <Link
+                        to={`/numbers/${types[index - 1]}`}
+                        title={NumberMetaMap.get(types[index - 1]).description}
+                    >
+                        <div className='text-2xl'>← {types[index - 1]}</div>
+                        <div>{NumberMetaMap.get(types[index - 1]).description}</div>
+                    </Link>
+                )}
+                {index < numTypes - 1 && (
+                    <Link
+                        className='ml-auto text-right'
+                        title={NumberMetaMap.get(types[index + 1]).description}
+                        to={`/numbers/${types[index + 1]}`}
+                    >
+                        <div className='text-2xl'>{types[index + 1]} →</div>
+                        <div>{NumberMetaMap.get(types[index + 1]).description}</div>
+                    </Link>
+                )}
             </div>
         </Layout>
     );
