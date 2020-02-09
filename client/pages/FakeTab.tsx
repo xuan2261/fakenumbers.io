@@ -6,7 +6,7 @@
  * @copyright 2020 Nguyen Huu Phuoc <me@phuoc.ng>
  */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import SampleCode from '../components/SampleCode';
 import Separator from '../components/Separator';
@@ -25,6 +25,9 @@ const FakeTab: React.FC<FakeTabProps> = ({ fake, numberType }) => {
         setValue(fake());
         setCopied(false);
     };
+    useEffect(() => {
+        setValue(fake());
+    }, [numberType]);
     const onCopied = () => setCopied(true);
 
     return (
